@@ -16,7 +16,7 @@
   \caption{Salto-1P机器人\cite{Salto1P}}
   \label{fig:salto-1p}
 \end{figure}
-Salto-1P的主要特点是通过SEA驱动结构实现了能量的存储，以保证跳跃瞬间的能量爆发。它可以每0.58秒进行一次高度1m的连续跳跃，这样的敏捷性无疑是惊人的。初代Salto\cite{Salto}腿长约15cm，重约100g，能量密度137W/kg，各方面指标已经接近或超越其设计之初的模仿对象————自然界的夜猴。为了实现精确控制，Salto身上装备了用于控制姿态的尾部，Salto-1P还配备了一对螺旋桨。前者在研究中只进行一次跳跃，而后者由于通过两个螺旋桨控制横滚(Roll)和偏航(Yaw)，再加上尾部对俯仰(Pitch)的控制，实现了对空中身体姿态三个自由度的完全操控，因此可以做到连续跳跃。\\
+Salto-1P的主要特点是通过SEA驱动结构实现了能量的存储，以保证跳跃瞬间的能量爆发。它可以每0.58秒进行一次高度1m的连续跳跃，这样的敏捷性无疑是惊人的。初代Salto\cite{Salto}腿长约15cm，重约100g，能量密度137W/kg，各方面指标已经接近或超越其设计之初的模仿对象——自然界的夜猴。为了实现精确控制，Salto身上装备了用于控制姿态的尾部，Salto-1P还配备了一对螺旋桨。前者在研究中只进行一次跳跃，而后者由于通过两个螺旋桨控制横滚(Roll)和偏航(Yaw)，再加上尾部对俯仰(Pitch)的控制，实现了对空中身体姿态三个自由度的完全操控，因此可以做到连续跳跃。\\
 对本项目的启示：
 \begin{itemize}
   \item 本项目的弹跳部分设计参照了Salto腿部的机械模式，以提供有利于弹跳的机械增益曲线。
@@ -41,11 +41,11 @@ Multimo-bat多模态蝙蝠机器人是CMU机械系一位博士生2014年的作�
 \end{itemize}
 \begin{figure}[h]
   \centering%
-  \begin{subfigure}{3cm}
+  \begin{subfigure}{6cm}
     \includegraphics[height=10cm]{Multimo-bat_Structure.png}
     \caption{整体结构}
   \end{subfigure}%
-  \hspace{10em}%
+  \hspace{3em}%
   \begin{subfigure}{0.5\textwidth}
     \includegraphics[height=8cm]{Multimo-bat_Structure2.png}
     \caption{离合器}
@@ -55,9 +55,21 @@ Multimo-bat多模态蝙蝠机器人是CMU机械系一位博士生2014年的作�
 \end{figure}
 
 \subsection{EPFL Jumpglider}
-
-
+图\ref{fig:EPFL}是由瑞士洛桑联邦理工学院制作的Jumpglider机器人。
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=4cm]{EPFL.png}
+  \caption{EPFL Jumpglider滑翔机器人\cite{EPFL}}
+  \label{fig:EPFL}
+\end{figure}
+该机器人主要用于探究滑翔背后的数学原理，这也比较符合欧洲研究的一贯风格。该文章提出了三种仿生设计的折叠机翼原理，而最终得出结论固定翼滑翔距离较远。而出于仿生及紧致度的要求，固定翼方案不适用；本项目选择了蝴蝶式机翼收缩机制，以取得机械复杂度与鲁棒性的折衷。图\ref{fig:EPFL_leg}是EPFL对该机器人腿部的设计，大量使用塑料齿轮与铝合金构件与直流电机，由于该机器人使用场景为从高处下落，故这样的设计满足需求。但对于本项目而言，直流电机不足以提供足够原地起跳的爆发力，因此该设计仅供参考。
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=5cm]{EPFL_leg.png}
+  \caption{Jumpglider腿部设计\cite{EPFL}}
+  \label{fig:EPFL_leg}
+\end{figure}
 对本文的启示：
 \begin{itemize}
-  \item 给出了跳跃滑翔模型的理论基础，以及最优化滑翔距离的方式。
+  \item 分析比较了不同滑翔翼折叠机制的优劣；给出了一种弹射装置的参考设计。
 \end{itemize}
