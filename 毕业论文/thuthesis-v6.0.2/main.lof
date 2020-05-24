@@ -1,0 +1,45 @@
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Salto-1P机器人\cite {Salto1P}\relax }}{1}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Multimo-bat机器人\cite {multimo}\relax }}{2}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Multimo-bat主要结构\cite {multimo}\relax }}{3}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces EPFL Jumpglider滑翔机器人\cite {EPFL}\relax }}{4}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Jumpglider腿部设计\cite {EPFL}\relax }}{4}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 朗宇X2305无刷电机\relax }}{7}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces NanoPi Duo2 开发板\relax }}{7}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces FOC电机控制板\relax }}{8}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces EMAX 2S航模锂电池\relax }}{8}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces DS-S002M 4.3g数字舵机\relax }}{9}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces OV5640摄像头\relax }}{9}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 整体结构渲染图\relax }}{10}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces 齿轮的选择\relax }}{10}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces 减速器\relax }}{11}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces 减速器装配图\relax }}{11}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces 起跳前准备姿势\relax }}{12}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces 起跳后空中姿势\relax }}{12}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces 腿部装配图\relax }}{13}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces 机翼原理图\relax }}{13}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces 榫卯结构爆炸视图\relax }}{14}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces 榫卯连接处透视图\relax }}{15}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces 主板、子板、机翼支架和电路板装配完成\relax }}{15}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces 折叠状态磁场储能\relax }}{16}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces 跳跃时磁场做功\relax }}{16}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces 左视图\relax }}{17}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces 俯视图\relax }}{17}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces 右视图\relax }}{18}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces 正视图\relax }}{18}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces 左上等轴测视图\relax }}{19}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces 右上等轴测视图\relax }}{19}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces 系统架构\relax }}{20}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces FOC电流坐标变换\cite {FOC}\relax }}{21}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces MotorControl Workbench上位机\cite {MCSDK}\relax }}{22}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces ROS节点消息图\relax }}{23}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces CAD设计图(第一版)\relax }}{24}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 碳纤维切割实物(部分)\relax }}{24}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 3D打印零件\relax }}{25}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 机翼组装\relax }}{25}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces AB胶加固后的腿\relax }}{26}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces AB胶加固后的减速器\relax }}{26}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces 组装成品图\relax }}{27}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces 空载配置\relax }}{27}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces 空载测试结果\relax }}{28}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces 带载配置\relax }}{28}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces 带载测试结果\relax }}{28}{figure.caption.56}%

@@ -118,7 +118,7 @@ $$KV_{min}=\omega_{min}\div V=810(rpm/V)$$
   \label{fig:cogs}
 
 \end{figure}
-
+实际减速比为：$$i=36\div15\times80\div10=19.2$$
 据此我们设计出用于固定的减速器支架，选择铝合金材质CNC而成，保证连接强度的同时尽量减轻质量。设计图与实物图如图\ref{fig:retarder}所示，装配示意图如图\ref{fig:retarder_assembly}所示。
 \begin{figure}[H]
   \centering
@@ -379,4 +379,10 @@ ST MotorControl SDK\cite{MCSDK}提供了如图\ref{fig:MCSDK_UI}所示的功能�
 \end{table}
 其中校验位的计算方式为将数据包中CRC之前的所有位求和，用一个无符号16位整型变量存储，再把得到的结果的高8位右移8位与低8位相加，得到的结果存入一个8位无符号整型变量(也就是说在最后这步加法中无视溢出)。平心而论，这个操作只能说是魔改的求和校验，并不属于CRC，因为真正的CRC是有纠错能力的，而这个魔改的求和校验码只具有检错能力，因此这个变量名取Parity更为妥当，此处保留了源代码中的变量名。但在这种简单的串口通信中也无须纠错，误码重传代价不大，可以接受。
 \subsection{通信系统}
-本项目的主要通信框架为ROS\cite{ROS}(Robot Operating System,机器人操作系统)。与Ubuntu 18.04系统对应的ROS版本是ROS Melodic。ROS是一套发布-订阅机制的通信框架，需要一台主机运行roscore作为服务器，其他主机连接到这台服务器来发布和订阅消息。
+本项目的主要通信框架为ROS\cite{ROS}(Robot Operating System,机器人操作系统)。与Ubuntu 18.04系统对应的ROS版本是ROS Melodic。ROS是一套发布-订阅机制的通信框架，需要一台主机运行roscore作为服务器，其他主机连接到这台服务器来发布和订阅消息。在本项目中主要通过ROS回传摄像头图像数据，可以很方便的在ROS中配置摄像头参数。
+\begin{figure}[H]
+  \centering
+  {\includegraphics[height=3cm]{rosgraph.png}}
+  \caption{ROS节点消息图}
+  \label{fig:rosgraph}
+\end{figure}

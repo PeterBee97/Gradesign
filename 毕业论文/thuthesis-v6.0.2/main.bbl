@@ -1,0 +1,82 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
+  \urlstyle{same}\fi
+\providecommand{\href}[2]{\url{#2}}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{#1}}
+
+\bibitem[{Guizzo}(2019)]{Spot}
+{Guizzo}~E.
+\newblock By leaps and bounds: An exclusive look at how boston dynamics is
+  redefining robot agility\allowbreak[J].
+\newblock IEEE Spectrum, 2019, 56\penalty0 (12):\penalty0 34-39.
+
+\bibitem[{Kau} et~al.(2019){Kau}, {Schultz}, {Ferrante}, and {Slade}]{Doggo}
+{Kau}~N, {Schultz}~A, {Ferrante}~N, et~al.
+\newblock Stanford doggo: An open-source, quasi-direct-drive
+  quadruped\allowbreak[C]//\allowbreak
+2019 International Conference on Robotics and Automation (ICRA).
+\newblock 2019: 6309-6315.
+
+\bibitem[{Fei} et~al.(2019){Fei}, {Tu}, {Yang}, {Zhang}, and
+  {Deng}]{Hummingbird}
+{Fei}~F, {Tu}~Z, {Yang}~Y, et~al.
+\newblock Flappy hummingbird: An open source dynamic simulation of flapping
+  wing robots and animals\allowbreak[C]//\allowbreak
+2019 International Conference on Robotics and Automation (ICRA).
+\newblock 2019: 9223-9229.
+
+\bibitem[{Haldane} et~al.(2017){Haldane}, {Yim}, and {Fearing}]{Salto1P}
+{Haldane}~D~W, {Yim}~J~K, {Fearing}~R~S.
+\newblock Repetitive extreme-acceleration (14-g) spatial jumping with
+  salto-1p\allowbreak[C]//\allowbreak
+2017 IEEE/RSJ International Conference on Intelligent Robots and Systems
+  (IROS).
+\newblock 2017: 3345-3351.
+
+\bibitem[Haldane et~al.(2016)Haldane, Plecnik, Yim, and Fearing]{Salto}
+HALDANE~D~W, PLECNIK~M~M, YIM~J~K, et~al.
+\newblock Robotic vertical jumping agility via series-elastic power
+  modulation\allowbreak[J].
+\newblock Science Robotics, 2016, 1\penalty0 (1).
+
+\bibitem[Woodward(2017)]{multimo}
+WOODWARD~M~A.
+\newblock Multimo-bat: Biologically inspired integrated multi-modal
+  locomotion\allowbreak[D].
+\newblock Carnegie Mellon University, 2017.
+
+\bibitem[Kovac et~al.(2011)Kovac, Wassim-Hraiz, Zufferey, and Floreano]{EPFL}
+KOVAC~M, WASSIM-HRAIZ~O, Fauria, ZUFFEREY~J~C, et~al.
+\newblock The epfl jumpglider: A hybrid jumping and gliding robot with rigid or
+  folding wings\allowbreak[J/OL].
+\newblock 2011.
+\newblock DOI: \doi{10.1109/ROBIO.2011.6181502}.
+
+\bibitem[Hughes et~al.(2019)Hughes and Drury]{FOC}
+HUGHES~A, DRURY~B.
+\newblock Chapter 8 - field oriented control of induction
+  motors\allowbreak[M/OL]//\allowbreak
+HUGHES~A, DRURY~B.
+\newblock Electric Motors and Drives (Fifth Edition).
+\newblock Fifth edition ed.
+\newblock Newnes, 2019: 261 - 305.
+\newblock
+  \url{http://www.sciencedirect.com/science/article/pii/B9780081026151000088}.
+\newblock DOI: \doi{https://doi.org/10.1016/B978-0-08-102615-1.00008-8}.
+
+\bibitem[STMicroelectronics(2018)]{MCSDK}
+STMICROELECTRONICS.
+\newblock X-cube-mcsdk\allowbreak[EB/OL].
+\newblock 2018.
+\newblock \url{https://www.st.com/zh/embedded-software/x-cube-mcsdk.html}.
+
+\bibitem[Quigley et~al.(2009)Quigley, Conley, Gerkey, Faust, Foote, Leibs,
+  Wheeler, and Ng]{ROS}
+QUIGLEY~M, CONLEY~K, GERKEY~B~P, et~al.
+\newblock Ros: an open-source robot operating system\allowbreak[C]//\allowbreak
+ICRA Workshop on Open Source Software.
+\newblock 2009.
+
+\end{thebibliography}

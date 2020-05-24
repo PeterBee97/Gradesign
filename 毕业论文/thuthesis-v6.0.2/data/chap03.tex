@@ -1,134 +1,94 @@
 % !TeX root = ../main.tex
 
-\chapter{组装与调试}
+\chapter{制造，组装与测试}
 \label{cha:chapter03}
-本项目选择把跳跃和滑翔分开作为两个独立的过程来分析与控制，用一个无刷电机驱动跳跃部分，用一个舵机控制机翼的开合。
-\section{理论计算}
-\label{sec:calculations}
-取$g=9.8m/s^2$，预计机器人重量$m=200g$，跳跃高度$h=1m$，起跳电机做功时间$t=0.1s$，则机器人所需最小动能：
-\begin{equation}
-\label{equ:chap2:W_calc}
-W_k=mgh
-\end{equation}
-二级齿轮减速器机械效率估计为$\eta=80\%$，则所需电机输出最小平均功率：
-\begin{equation}
-  \label{equ:chap2:P_calc}
-  \bar{P}_{min}=\frac{W_k}{t·\eta}
-  \end{equation}
-解得：$$\bar{P}_{min}=24.5(W)$$
-二级齿轮减速器减速比大约在10\sim30:1，设计中一次起跳输出级齿轮大约需要转半圈，取减速比20:1，则所需无刷电机转速：
-$$\omega_{min}=0.5\times10\div t\times60=6000(rpm)$$
-使用2S锂离子电池，额定电压$V=7.4V$，则所需最小电机KV值：
-$$KV_{min}=\omega_{min}\div V=810(rpm/V)$$
-一般来讲KV值越小无刷电机转矩越大，根据计算及机械需求考虑，选择了最大功率$P_{max}=168W$的朗宇X2305航模无刷电机，KV值$KV=1450$。\\
-机器人起跳最小速度：
-\begin{equation}
-  \label{equ:chap2:v_calc}
-  v=\sqrt{2gh}
-  \end{equation}
-根据动量定理：
-\begin{equation}
-  \label{equ:chap2:motion_principle}
-  \bar{F}·t=m·v
-  \end{equation}
-解得所需平均力：$$\bar{F}=8.854(N)$$
-航模用无刷电机的力矩数据不好获得，我们通过相同工作条件下的带螺旋桨升力进行估算，实际输出力只会更大。电机参数显示6000rpm时的升力等效质量约为$m_f=200\sim300g$，即经减速器输出的力为：$$F_min=m_{f,min}·g·20=39.2(N)>\bar{F}$$
-此处还未考虑腿部连杆结构带来的机械增益，而其均值应>1，因此理论上输出力是足够支持跳跃的。
-\section{元件选型}
-\label{sec:components}
-根据上述计算过程与现实考量，选择元件如表\ref{tab:bom}所示。
-\begin{table}[htb]
-  \centering
-  \begin{minipage}[t]{0.8\linewidth}
-  \caption{BOM表}
-  \label{tab:bom}
-    \begin{tabularx}{\linewidth}{lX}
-      \toprule[1.5pt]
-      {\heiti 元件名} & {\heiti 描述} \\\midrule[1pt]
-      朗宇X2305无刷电机 & 外转子无刷电机，KV值1450 \\
-      NanoPi Duo2 开发板 & 全志H3主控，运行Ubuntu 18.04\\
-      FOC电机控制板 &  基于STSPINF0A方案的BLDC矢量控制 \\
-      EMAX 2S航模锂电池 & 容量300mAh，质量为15g\\
-      DS-S002M 4.3g数字舵机 & 用于控制机翼开合\\
-      OV5640摄像头 & 500W像素，1080p@30fps,720p@60fps\\
-      \bottomrule[1.5pt]
-    \end{tabularx}
-  \end{minipage}
-\end{table}
-\section{机械设计}
-\label{sec:mechanical}
-初步设计的机器人整体结构三维仿真图如下(螺丝等固定细节略去)：
+\section{制造与组装}
+图\ref{fig:CAD}和图\ref{fig:carbon_fiber}为第一版设计的机身碳纤维板设计图和实物。这里遇到的一些小问题是设计时未完全考虑到加工情况，由于开槽是用刀具铣，因此方形的槽是不存在的，角上一定会是半径等于刀具的圆角。这个问题在第三版设计的时候体现得比较明显，不得不对零件进行了手动加工处理才能正常组装。
 \begin{figure}[H]
-  \centering
-  \includegraphics[height=8cm]{render2.jpg}
-  \caption{整体结构渲染图}
-  \label{fig:render_v1}
+  \centering%
+  \includegraphics[height=6cm]{CAD.png}
+  \caption{CAD设计图(第一版)}
+  \label{fig:CAD}
 \end{figure}
-\subsection{减速器设计}
-设计目标为减速比20:1的两级齿轮减速器。考虑本项目实际尺寸，选用模数为0.5或0.6的齿轮较为合适。在市面上可直接买到的齿轮中，选择了0.5模数15齿的主轴齿轮，10/36齿的次级双层齿轮和80齿的末级齿轮。其中主轴齿轮材料为铜（粉末铸造），次级齿轮为铁基齿轮，而体积最大的末级齿轮采用了铝合金材质，兼顾了硬度与重量。
+\begin{figure}[H]
+  \centering%
+  \includegraphics[height=7cm]{carbon_fiber.jpeg}
+  \caption{碳纤维切割实物(部分)}
+  \label{fig:carbon_fiber}
+\end{figure}
+机翼接头使用了3D打印ABS材质。这部分也打印了两次，第一次由于不了解选择的商家的3D打印材料的膨胀系数，打印出来的孔都小于要求，商家免费给打印了第二版。虽然第二版有一个零件的孔位依然是错的，以及这次的T型接头断掉了，但自己修修补补勉强都能用(怀疑商家是手动扩的孔)。但最大的问题出在T型接头，3D打印的材料与碳纤维杆之间的摩擦力在舵机拉动时无法忽略，换成铜轴承也无法解决，因此最终换成了内部带滚珠的直线轴承。
+\begin{figure}[H]
+  \centering%
+  \includegraphics[height=6cm]{3Dprint.png}
+  \caption{3D打印零件}
+  \label{fig:3Dprint}
+\end{figure}
+\begin{figure}[H]
+  \centering%
+  \includegraphics[height=8cm]{wing_assembled.png}
+  \caption{机翼组装}
+  \label{fig:wing_assembled}
+\end{figure}
+腿的部分最大的问题来自于元件之间连接的间隙与晃动。设计时各部分是平面设计，连接轴使用了直径2mm的碳纤维杆和金属杆，杆与板的固定使用了卡簧。而实际发现，卡簧径向的摩擦力不够可靠，而且一些关节的晃动会被机构放大，几次运动之后晃动就大到无法接受。因此使用AB胶对关节进行了加固，如图\ref{fig:leg_assembled}所示，效果拔群。
+\begin{figure}[H]
+  \centering%
+  \includegraphics[height=9cm]{leg_assembled.jpeg}
+  \caption{AB胶加固后的腿}
+  \label{fig:leg_assembled}
+\end{figure}
+减速器部分同理，次级齿轮用2mm打头轴和卡簧固定，在运动一段时间后卡簧松动，轴会发生歪斜从而导致齿轮卡住。用AB胶固定后改善，如图\ref{fig:retarder_assembled}所示。
+\begin{figure}[H]
+  \centering%
+  \includegraphics[height=7cm]{retarder_assembled.jpeg}
+  \caption{AB胶加固后的减速器}
+  \label{fig:retarder_assembled}
+\end{figure}
+最终组装成品图如图\ref{fig:assembled}所示：
+\begin{figure}[H]
+  \centering%
+  \includegraphics[height=10cm]{assembled.jpeg}
+  \caption{组装成品图}
+  \label{fig:assembled}
+\end{figure}
+\section{电机测试}
+电机控制测试部分分为空载和带载测试。空载测试配置如图\ref{fig:motor_test}所示。通过改变电机启动电流曲线，进行了平稳启动(2.5s内从0加速至1000rpm)和快速启动(120ms内从0加速至10000rpm)测试，并用MotorControl Workbench自带的画图工具进行了速度监测，得到结果如图\ref{fig:motor_test_speed}所示：
 
 \begin{figure}[H]
+  \centering%
+  \includegraphics[height=5cm]{motor_test.png}
+  \caption{空载配置}
+  \label{fig:motor_test}
+\end{figure}
+\begin{figure}[H]
   \centering
-  \subcaptionbox{主轴齿轮\label{fig:cog1}}[4cm] 
-    {\includegraphics[height=3cm]{cog15.png}}
-  \hspace{3em}
-  \subcaptionbox{次级齿轮\label{fig:cog2}}[3cm]
-      {\includegraphics[height=3cm]{cog10_36.png}}
+  \subcaptionbox{平稳启动\label{fig:motorspeed1}}[6cm] 
+    {\includegraphics[height=5cm]{motorspeed1.png}}
   \hspace{4em}
-  \subcaptionbox{末级齿轮\label{fig:cog3}}
-      {\includegraphics[height=3cm]{cog80.png}}
-  \caption{齿轮的选择}
-  \label{fig:cogs}
-
+  \subcaptionbox{快速启动\label{fig:motorspeed2}}
+      {\includegraphics[height=5cm]{motorspeed2.png}}
+  \caption{空载测试结果}
+  \label{fig:motor_test_speed}
 \end{figure}
-
-据此我们设计出用于固定的减速器支架，选择铝合金材质CNC而成，保证连接强度的同时尽量减轻质量。设计图与实物图如图\ref{fig:retarder}所示，装配示意图如图\ref{fig:retarder_assembly}所示。
+带载测试配置如图\ref{fig:retarder_test}所示，只安装减速器便于观察输出级齿轮行程，按照同样的参数进行平稳启动和快速启动测试，结果如图\ref{fig:retarder_test_speed}:
+\begin{figure}[H]
+  \centering%
+  \includegraphics[height=5cm]{retarder_test.png}
+  \caption{带载配置}
+  \label{fig:retarder_test}
+\end{figure}
 \begin{figure}[H]
   \centering
-  \subcaptionbox{减速器模型\label{fig:retarder_model}}[7cm] 
-    {\includegraphics[height=4cm]{retarder_model.png}}
+  \subcaptionbox{平稳启动\label{fig:motorspeed3}}[6cm] 
+    {\includegraphics[height=5cm]{motorspeed3.png}}
   \hspace{4em}
-  \subcaptionbox{减速器实物\label{fig:retarder_real}}
-      {\includegraphics[height=4cm]{retarder_real.png}}
-  \caption{减速器}
-  \label{fig:retarder}
+  \subcaptionbox{快速启动\label{fig:motorspeed4}}
+      {\includegraphics[height=5cm]{motorspeed4.png}}
+  \caption{带载测试结果}
+  \label{fig:retarder_test_speed}
 \end{figure}
-\begin{figure}[H]
-  \centering%
-  \includegraphics[height=8cm]{retarder_assembly.png}
-  \caption{减速器装配图}
-  \label{fig:retarder_assembly}
-\end{figure}
-\subsection{腿部设计}
-参考Salto\cite{Salto}的腿部模型，此处实现了如图\ref{fig:2d_leg_fold}和图\ref{fig:2d_leg_stretch}所示的连杆结构。其中灰色圆为输出级齿轮，带动上部的曲柄-摇臂四连杆结构，同时四连杆摇臂为一凹四边形块，与机身相连的另一点在下部又组成了一个平行四边形四连杆，在输出级利用杠杆结构增大位移，实现触地端的较大速度，从而使身体跳起。虽然看上去略显复杂，但总体形态接近自然界大多数生物的腿部构造，这也从一个侧面反映了该结构的合理性。
-
-\begin{figure}[H]
-  \centering%
-  \includegraphics[height=6cm]{2d_leg_fold.png}
-  \caption{起跳前准备姿势}
-  \label{fig:2d_leg_fold}
-\end{figure}
-\begin{figure}[H]
-  \centering%
-  \includegraphics[height=11cm]{2d_leg_stretch.png}
-  \caption{起跳后空中姿势}
-  \label{fig:2d_leg_stretch}
-\end{figure}
-
-据此尺寸在SolidWorks中设计出三维模型，装配示意图如图\ref{fig:3d_leg}所示。
-\begin{figure}[H]
-  \centering%
-  \includegraphics[height=8cm]{3d_leg.png}
-  \caption{腿部装配图}
-  \label{fig:3d_leg}
-\end{figure}
-
-\subsection{机翼设计}
-\label{sec:wings}
-采用蝴蝶式\cite{EPFL}折叠机翼设计，利用一个小舵机带动两片机翼的同步开合。为了降低机翼质量，采用碳纤维骨架与蒙皮的形式，骨架由碳纤维杆与3D打印的接头组成，翼面材料使用潍坊风筝布料，以保证强度与抗老化性。机翼部分
-\begin{figure}[H]
-  \centering%
-  \includegraphics[height=8cm]{wings_mechanism.png}
-  \caption{机翼原理图}
-  \label{fig:wings_mechanism}
-\end{figure}
+测试结果中横坐标为时间(s)，纵坐标为转速(rpm)，因此启动曲线下方到横轴的面积即为电机行程（转数）。将快速启动曲线近似成直线，则输出级齿轮行程：$$\Theta=\frac{1}{2}\omega_{max}t\div60\div i=0.52(r)$$
+大致为半圈，符合设计需求。
+\section{跳跃测试}
+\section{机翼测试}
+\section{整体测试}
+\section{项目总结}
