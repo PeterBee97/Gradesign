@@ -1,0 +1,2 @@
+VINS-Mono/ar_demo:VINS-Mono/benchmark_publisher:VINS-Mono/camera_model:VINS-Mono/feature_tracker:VINS-Mono/pose_graph:VINS-Mono/vins_estimator:jump
+-DCATKIN_WHITELIST_PACKAGES=jump -DCATKIN_DEVEL_PREFIX=/home/pi/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/catkin_ws/install -G Unix Makefiles
