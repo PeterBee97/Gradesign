@@ -1,0 +1,47 @@
+\contentsline {chapter}{\numberline {第1章}引言}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究背景}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}相关研究}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Salto}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Multimo-bat}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}EPFL Jumpglider}{3}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {第2章}整体设计}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}理论计算}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}元件选型}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}机械设计}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}减速器设计}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}腿部设计}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}机翼设计}{13}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}机身设计}{14}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}磁助力装置}{16}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}整体装配图}{17}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}嵌入式系统}{20}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}控制算法}{20}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}串口通信协议}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}通信系统}{23}{subsection.2.4.3}%
+\contentsline {chapter}{\numberline {第3章}制造，组装与测试}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}制造与组装}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}电机测试}{28}{section.3.2}%
+\contentsline {section}{\numberline {3.3}机翼测试}{29}{section.3.3}%
+\contentsline {section}{\numberline {3.4}跳跃测试}{30}{section.3.4}%
+\contentsline {chapter}{\numberline {第4章}项目总结}{34}{chapter.4}%
+\contentsline {chapter}{插图索引}{35}{section*.64}%
+\contentsline {chapter}{表格索引}{37}{section*.66}%
+\contentsline {chapter}{公式索引}{38}{section*.68}%
+\contentsline {chapter}{参考文献}{39}{section*.70}%
+\contentsline {chapter}{致\hspace {\ccwd }谢}{40}{section*.72}%
+\contentsline {chapter}{声\hspace {\ccwd }明}{41}{section*.74}%
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{\numberline {附录 A}外文资料的书面翻译}{42}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Salto-1P的极限加速度(14 g)重复空间跳跃}{42}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}引言}{42}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}实验方法}{44}{subsection.A.1.2}%
+\contentsline {subsubsection}{\numberline {A.1.2.1}姿态控制}{44}{subsubsection.A.1.2.1}%
+\contentsline {subsubsection}{\numberline {A.1.2.2}机器人硬件}{45}{subsubsection.A.1.2.2}%
+\contentsline {subsubsection}{\numberline {A.1.2.3}跳跃控制器}{45}{subsubsection.A.1.2.3}%
+\contentsline {subsubsection}{\numberline {A.1.2.4}实验过程}{47}{subsubsection.A.1.2.4}%
+\contentsline {subsection}{\numberline {A.1.3}实验结果}{47}{subsection.A.1.3}%
+\contentsline {subsubsection}{\numberline {A.1.3.1}姿态稳定}{47}{subsubsection.A.1.3.1}%
+\contentsline {subsubsection}{\numberline {A.1.3.2}跳跃运动}{49}{subsubsection.A.1.3.2}%
+\contentsline {subsubsection}{\numberline {A.1.3.3}运动控制器}{50}{subsubsection.A.1.3.3}%
+\contentsline {subsubsection}{\numberline {A.1.3.4}行为探究}{50}{subsubsection.A.1.3.4}%
+\contentsline {subsection}{\numberline {A.1.4}结论与展望}{51}{subsection.A.1.4}%

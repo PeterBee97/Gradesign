@@ -1,0 +1,14 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "math_commands.xdv" "math_commands.pdf" "math_commands" 0
+  "math_commands.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "math_commands.pdf"
+["xelatex"] 1591720066 "math_commands.tex" "math_commands.xdv" "math_commands" 1591720066
+  "/usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf" 1583102494 39451 60d7debd9ef8ece44cbe965493576c2d ""
+  "/usr/local/texlive/2020/texmf-var/web2c/xetex/xelatex.fmt" 1589363734 4769648 37d1f7fc8c8d3bc5c31498bde4fd1be4 ""
+  "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
+  "math_commands.aux" 1591720066 8 a94a2480d3289e625eea47cd1b285758 ""
+  "math_commands.tex" 1578227896 8469 bece1eeb998848eb39068710a6af82fc ""
+  (generated)
+  "math_commands.log"
+  "math_commands.xdv"
